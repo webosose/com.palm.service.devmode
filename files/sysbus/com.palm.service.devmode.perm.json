@@ -1,0 +1,4 @@
+{
+    "com.palm.service.devmode": ["settings"],
+    "com.palm.service.devmode.test": ["system.devmode", "settings"]
+}

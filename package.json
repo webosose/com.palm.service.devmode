@@ -1,0 +1,11 @@
+{
+  "name": "com.palm.service.devmode",
+  "version": "1.0.0",
+  "description": "Developer Mode service",
+  "main": "devmode_service.js",
+  "scripts": {
+    "test": "NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules node tests/sanity.js"
+  },
+  "author": "LG Electronics",
+  "license": "Apache 2.0"
+}

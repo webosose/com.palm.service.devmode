@@ -1,0 +1,11 @@
+{
+    "allowedNames": ["com.palm.service.devmode.test"],
+    "type": "regular",
+    "appId": "com.palm.service.devmode.test",
+    "permissions": [
+        {
+            "outbound": ["com.palm.service.devmode"],
+            "service": "com.palm.service.devmode.test"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+	"id": "com.palm.service.devmode",
+	"description": "Developer Mode Service",
+	"services": [{
+		"name": "com.palm.service.devmode",
+		"description": "Developer Mode Service",
+		"commands": [{
+			"name": "getDevMode",
+			"assistant": "GetDevModeCommandAssistant",
+			"description": "getDevMode gets the current enabled status (true or false) of Developer Mode",
+			"public": true
+		}, {
+			"name": "setDevMode",
+			"assistant": "SetDevModeCommandAssistant",
+			"description": "setDevMode sets the enabled status (true or false) of Developer Mode and reboots the device",
+			"public": true
+		}, {
+			"name": "getPassphrase",
+			"assistant": "SetDevModeCommandAssistant",
+			"description": "getPassphrase gets the passphrase for the Developer Mode key",
+			"public": true
+		}]
+	}]
+}

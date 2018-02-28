@@ -1,0 +1,14 @@
+{
+	"role": {
+		"allowedNames": ["com.palm.service.devmode"],
+		"type": "regular",
+		"exeName": "js"
+	},
+	"permissions": [
+		{
+			"inbound": ["*"],
+			"outbound": ["*"],
+			"service": "com.palm.service.devmode"
+		}
+	]
+}

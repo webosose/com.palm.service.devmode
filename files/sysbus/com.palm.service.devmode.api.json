@@ -1,0 +1,9 @@
+{
+  "settings": [
+      "com.palm.service.devmode/getDevMode"
+  ],
+  "system.devmode": [
+      "com.palm.service.devmode/getPassphrase",
+      "com.palm.service.devmode/setDevMode"
+  ]
+}
