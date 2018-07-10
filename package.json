@@ -7,5 +7,5 @@
     "test": "NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules node tests/sanity.js"
   },
   "author": "LG Electronics",
-  "license": "Apache 2.0"
+  "license": "Apache-2.0"
 }
