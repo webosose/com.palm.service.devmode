@@ -1,4 +1,4 @@
-# Copyright (c) 2013-2018 LG Electronics, Inc.
+# Copyright (c) 2013-2019 LG Electronics, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 cmake_minimum_required(VERSION 2.8.7)
-project(com.palm.service.devmode NONE) 
+project(com.palm.service.devmode NONE)
 include(webOS/webOS)
 webos_modules_init(1 0 0 QUALIFIER RC4)
 webos_component(1 0 0)
@@ -34,6 +34,10 @@ install(DIRECTORY . DESTINATION ${INSTALL_DIR} FILES_MATCHING PATTERN "*" PATTER
 #webos_build_daemon(NAME devmode)
 webos_configure_source_files(upstart18File files/launch/devmode.conf)
 install(PROGRAMS ${upstart18File} DESTINATION ${WEBOS_INSTALL_SYSCONFDIR}/init)
+
+# install systemd service to /etc/systemd/system
+webos_build_configured_file(files/launch/devmode.service SYSCONFDIR systemd/system)
+webos_build_configured_file(files/launch/devmode.sh SYSCONFDIR systemd/system/scripts)
 
 # Install ls2 service and role files
 webos_build_system_bus_files()
