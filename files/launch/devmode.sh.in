@@ -23,10 +23,13 @@
 if grep -qs "qemux86" /etc/hostname ; then
     touch @WEBOS_INSTALL_SYSMGR_LOCALSTATEDIR@/preferences/devmode_enabled
     HOMEDIR=/home/developer
-    if [ ! -e ${HOMEDIR}/.ssh/authorized_keys ] ; then
+    if [ ! -s ${HOMEDIR}/.ssh/authorized_keys ] ; then
         mkdir -p ${HOMEDIR}/.ssh
         chmod 700 ${HOMEDIR}/.ssh
         cp @WEBOS_INSTALL_WEBOS_SERVICESDIR@/com.palm.service.devmode/ssh/webos.pub ${HOMEDIR}/.ssh/authorized_keys || :
+        if [ ! -s ${HOMEDIR}/.ssh/authorized_keys ] ; then
+            cp @WEBOS_INSTALL_WEBOS_SERVICESDIR@/com.palm.service.devmode/ssh/webos.pub ${HOMEDIR}/.ssh/authorized_keys || :
+        fi
         chmod 600 ${HOMEDIR}/.ssh/authorized_keys
         chown developer:developer ${HOMEDIR}
         chown -R developer:developer ${HOMEDIR}/.ssh
@@ -52,6 +55,10 @@ if [ ! -e @WEBOS_INSTALL_SYSMGR_LOCALSTATEDIR@/preferences/devmode_enabled ] ; t
     rm -rf /media/developer
     if [ -e @WEBOS_INSTALL_WEBOS_LOCALSTATEDIR@/ls2-dev ] ; then
         rm -rf @WEBOS_INSTALL_WEBOS_LOCALSTATEDIR@/ls2-dev
+        @WEBOS_INSTALL_SBINDIR@/ls-control scan-volatile-dirs
+    fi
+    if [ -e @WEBOS_INSTALL_SYSBUS_DEVDATADIR@ ] ; then
+        rm -rf @WEBOS_INSTALL_SYSBUS_DEVDATADIR@
         @WEBOS_INSTALL_SBINDIR@/ls-control scan-volatile-dirs
     fi
 fi
