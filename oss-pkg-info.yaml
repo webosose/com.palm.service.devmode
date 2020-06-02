@@ -1,0 +1,4 @@
+Open Source Software Package:
+- name: webOSOSE-com_palam_service_devmode
+  source: https://github.com/webosose/com.palm.service.devmode
+  license: Apache-2.0
