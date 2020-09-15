@@ -132,7 +132,7 @@ service.register("setDevMode", function(message) {
 				if (err) {
 					message.respond({
 						errorText: "exec of 'reboot' failed",
-						message: error.toString(),
+						message: err.toString(),
 						returnValue: false,
 						errorCode: 3
 					});
