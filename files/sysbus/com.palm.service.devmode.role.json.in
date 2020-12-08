@@ -1,11 +1,12 @@
 {
-	"appId": "com.palm.service.devmode",
-	"allowedNames": ["com.palm.service.devmode"],
-	"type": "regular",
-	"permissions": [
-		{
-			"outbound": ["com.palm.systemservice"],
-			"service": "com.palm.service.devmode"
-		}
-	]
+    "appId": "com.palm.service.devmode",
+    "trustLevel": "oem",
+    "allowedNames": ["com.palm.service.devmode"],
+    "type": "regular",
+    "permissions": [
+        {
+            "outbound": ["com.palm.systemservice"],
+            "service": "com.palm.service.devmode"
+        }
+    ]
 }

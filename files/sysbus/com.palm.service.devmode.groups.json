@@ -1,0 +1,5 @@
+{
+    "allowedNames"  : [],
+    "devmode.query" : ["dev"],
+    "devmode.management" : ["oem"]
+}

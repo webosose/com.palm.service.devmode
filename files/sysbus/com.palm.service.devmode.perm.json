@@ -1,4 +1,4 @@
 {
-    "com.palm.service.devmode": ["settings"],
-    "com.palm.service.devmode.test": ["system.devmode", "settings"]
+    "com.palm.service.devmode": ["systemsettings.query"],
+    "com.palm.service.devmode.test": ["system.devmode", "systemsettings.query"]
 }

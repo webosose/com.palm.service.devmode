@@ -1,8 +1,8 @@
 {
-  "settings": [
+  "devmode.query": [
       "com.palm.service.devmode/getDevMode"
   ],
-  "system.devmode": [
+  "devmode.management": [
       "com.palm.service.devmode/getPassphrase",
       "com.palm.service.devmode/setDevMode"
   ]
