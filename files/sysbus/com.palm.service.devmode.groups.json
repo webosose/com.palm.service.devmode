@@ -1,5 +1,5 @@
 {
-    "allowedNames"  : [],
+    "allowedNames"  : ["com.palm.service.devmode"],
     "devmode.query" : ["dev"],
     "devmode.management" : ["oem"]
 }
