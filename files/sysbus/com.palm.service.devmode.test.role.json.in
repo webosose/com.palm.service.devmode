@@ -1,5 +1,6 @@
 {
     "allowedNames": ["com.palm.service.devmode.test"],
+    "trustLevel": "oem",
     "type": "regular",
     "appId": "com.palm.service.devmode.test",
     "permissions": [
