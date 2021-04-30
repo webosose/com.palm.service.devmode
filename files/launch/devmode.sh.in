@@ -1,5 +1,5 @@
 #!/bin/sh
-# Copyright (c) 2019 LG Electronics, Inc.
+# Copyright (c) 2019-2021 LG Electronics, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -43,10 +43,6 @@ if [ -e @WEBOS_INSTALL_SYSMGR_LOCALSTATEDIR@/preferences/devmode_enabled ] ; the
     chmod -R 777 ${TMPDEVDIR} ${MEDIADEVDIR}
     if [ ! -e ${MEDIADEVDIR}/log ] ; then
         ln -s ${TMPDEVDIR}/log ${MEDIADEVDIR}/log
-    fi
-    if [ -f @WEBOS_INSTALL_APPSTORAGEDIR@@WEBOS_INSTALL_WEBOS_SERVICESDIR@/com.palmdts.devmode.service/start-devmode.sh ] ; then
-        chmod -f 700 @WEBOS_INSTALL_APPSTORAGEDIR@@WEBOS_INSTALL_WEBOS_SERVICESDIR@/com.palmdts.devmode.service/start-devmode.sh || :
-        @WEBOS_INSTALL_APPSTORAGEDIR@@WEBOS_INSTALL_WEBOS_SERVICESDIR@/com.palmdts.devmode.service/start-devmode.sh || :
     fi
 fi
 
